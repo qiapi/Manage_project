@@ -1,0 +1,310 @@
+<html>
+<head>
+	<title>首页</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/index_editMessage.css">
+	<link rel="stylesheet" type="text/css" href="css/index_list.css">
+	<link rel="stylesheet" type="text/css" href="css/index_editEvents.css">
+	<link rel="stylesheet" type="text/css" href="css/index_stuComment.css">
+	<link rel="stylesheet" type="text/css" href="css/index_websiteStyle.css">
+	<link rel="stylesheet" href="http://apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+</head>
+<body>
+<!--导师信息预览模态框-->
+<div id="messagePre-overlay"> 
+	<div class="messagePre-container">		
+	    <div class=" titleStyle">导师信息</div>
+	    <div class="MsPreContainer">
+	    	<div>陈某某</div><br>
+	    	<div>电子与信息学院</div><br>
+	    	<div>男</div><br>
+	    	<div>教授</div>
+	    	<div class="imgPre">picture</div>
+	    </div>
+	    <div class="descriptionPre">
+	    	<div>导师简介：</div>
+		    <div>这里是导师简介的内容这里是导师简介的内容这里是导师简介的内容这里是导师简介的内容</div>
+		    <div>学生推荐：</div>
+		    <div>这里是学生推荐的内容这里是学生推荐的内容这里是学生推荐的内容这里是学生推荐的内容</div>
+		    <div>一句话简介：</div>
+		    <div>这里是一句话简介这里是一句话简介这里是一句话简介这里是一句话简介</div>
+	    </div>
+	    <div class="btnPreGroup">
+	    	<div class="btn">确认提交</div>
+	    	<div class="btn" id="msgPreClose">关闭</div>
+	    </div>
+	</div>
+</div>
+
+<div id="eventsPre-overlay">
+	<div class="eventsPre-container">
+		<div class="titleStyle eventsPreTitle">“教书育人 吾爱吾师”——第八届“我最爱的导师”活动介绍</div>
+		<div class="eventsPreContent">
+			<div>活动视频</div>
+			<div>活动信息</div>
+			<div class="btn" id="eventsPreBtn">确认提交</div>
+		</div>
+	</div>
+</div>
+
+<div class="header">
+	<span>华南理工大学 “我最喜爱的导师” 评选活动</span>
+	<span><a id="a2">退出</a></span><span>欢迎您|xxx管理员</span><br>
+	<span>后台管理系统</span>
+</div>
+
+<div class="content">
+	<div class="nav"><!--左侧导航栏-->
+		<ul>
+			<li class="active">更新导师信息</li>
+			<li>更新活动介绍</li>
+			<li>管理学生留言</li>
+			<li>更新网站样式</li>
+		</ul>
+	</div>
+	<div class="information"><!--右侧显示信息-->
+		<div class="container">
+		<!--添加导师信息-->
+		<div class="editMessage content_display" id="editMessage">
+			<div class=" titleStyle title">导师信息</div>
+			<div class="personalMessage">
+				<label>姓名：</label>
+				<input type="text" name="name" /><br>
+				<label>性别：</label>
+				<select class="sex">
+					<option>男</option>
+					<option>女</option>
+				</select>
+				<br>
+				<label>学院：</label>
+				<select class="academy">
+					<option>电子与信息学院</option>
+					<option>机械与汽车工程学院</option>
+					<option>建筑学院</option>
+					<option>土木与交通学院</option>
+					<option>材料科学与工程学院</option>
+					<option>化学与化工学院</option>
+					<option>轻工科学与工程学院</option>
+					<option>食品科学与工程学院</option>
+					<option>数学学院</option>
+					<option>物理与光电学院</option>
+					<option>经济与贸易学院</option>
+					<option>自动化科学与工程学院</option>
+					<option>计算机科学与工程学院</option>
+					<option>电力学院</option>
+					<option>生物科学与工程学院</option>
+					<option>环境与能源学院</option>
+					<option>软件学院</option>
+					<option>工商管理学院</option>
+					<option>公共管理学院</option>
+					<option>马克思主义学院</option>
+					<option>外国语学院</option>
+					<option>法学院</option>
+					<option>新闻与传播学院</option>
+					<option>艺术学院</option>
+					<option>体育学院</option>
+					<option>设计学院</option>
+					<option>医学院</option>
+					<option>国际教育学院</option>
+				</select><br>
+				<label>职称：</label>
+				<input type="text" name="profession" />
+				<br>
+			</div>
+			<div class="upload">
+				<div></div>
+				<div class="btn">上传照片</div>
+			</div>
+			<br>
+			<label>导师简介：</label><br>
+			<textarea></textarea><br>
+			<label>学生推荐：</label><br>
+			<textarea></textarea><br>
+			<label>一句话简介：</label><br>
+			<textarea></textarea><br>
+			<div class="btnGroup">
+				<div class="btn btn1" id="messagePreview">信息预览</div>
+				<div class="btn btn1">确认提交</div>
+			</div>
+		</div>
+		<!--导师信息列表-->
+		<div class="" id="list">
+			<div class="list_top">
+				<div>导师姓名</div>
+				<div>所在学院</div>
+			</div>
+			<div class="list_content">
+				<ul>
+					<li>
+						<input type="checkbox" name="">
+						<div></div>
+						<div>陈某某</div>
+						<div>电子与信息学院</div>
+						<div class="btn">编辑</div>
+					</li>
+					<li>
+						<input type="checkbox" name="">
+						<div></div>
+						<div>陈某某</div>
+						<div>电子与信息学院</div>
+						<div class="btn">编辑</div>
+					</li>
+					<li>
+						<input type="checkbox" name="">
+						<div></div>
+						<div>陈某某</div>
+						<div>电子与信息学院</div>
+						<div class="btn">编辑</div>
+					</li>
+					<li>
+						<input type="checkbox" name="">
+						<div></div>
+						<div>陈某某</div>
+						<div>电子与信息学院</div>
+						<div class="btn">编辑</div>
+					</li>
+				</ul>
+				<div class="listBtn">
+					<input type="checkbox" name="">
+					<label>全选</label>
+					<div class="btn" id="addList">添加</div>
+					<div class="btn">删除</div>
+					<div>共有<span>40</span>条记录</div>
+					<div class="pageNumber">
+						<div>&lt;</div>
+						<div class="pageNumber_active">1</div>
+						<div>2</div>
+						<div>3</div>
+						<div>&gt;</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--更新活动信息-->
+		<div class="editEvents_container content_display" id="editEvents">
+			<div class="editEvents_content">
+				<div class="eventsMessage">
+					<div class="titleStyle">活动信息</div>
+					<div>
+						<label>活动标题：</label>
+						<input type="text" name=""><br>
+						<label>活动开始时间：</label>
+						<input type="text" id="dateBegin">
+						<label>活动结束时间：</label>
+						<input type="text" id="dateEnd"><br>
+						<label>视频上传：</label>
+						<input type="file" >
+						<div class="btn">确定</div><br>
+						<label class="videoIntroduction">视频说明：</label>
+						<textarea></textarea><br>
+					</div>
+				</div>
+				<div class="eventsProcedure">
+					<div class="titleStyle">活动流程<span>（请在以下文本编辑框中输入活动流程）</span></div>
+					<div class="editBox">
+						<ul class="editTool">
+							<li class="undo">
+								<div>&lt;- </div><div> -&gt;</div>
+							</li>
+							<li>
+								<select>
+									<option>15px</option>
+									<option>18px</option>
+								</select>
+								<select>
+									<option>宋体</option>
+									<option>楷体</option>
+									<option>微软雅黑</option>
+								</select>
+							</li>
+							<li>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</li>
+						</ul>
+						<textarea></textarea>
+					</div>
+					<div class="btn">确认</div>
+				</div>
+			</div>
+			<div class="btn editEventsBtn">信息预览</div>
+			<div class="btn editEventsBtn">确认提交</div>
+		</div>
+		<!--学生留言管理-->
+		<div class="content_display" id="stuComment">
+			<div class="titleStyle">学生留言管理</div>
+			<div class="commentTitle">
+				<input type="checkbox" name=""><label>留言</label><div>留言时间</div><div>操作</div>
+			</div>
+			<ul class="commentContent">
+				<li>
+					<input type="checkbox" name=""><label>老大</label><div>2017-1-7</div><div>删除</div>
+					<p>这个老师太棒了！</p>
+				</li>
+				<li>
+					<input type="checkbox" name=""><label>老二</label><div>2017-1-17</div><div>删除</div>
+					<p>这个老师太棒了！</p>
+				</li>
+				<li>
+					<input type="checkbox" name=""><label>老三</label><div>2017-1-27</div><div>删除</div>
+					<p>这个老师太棒了！</p>
+				</li>
+				<li>
+					<input type="checkbox" name=""><label>老四</label><div>2017-1-11</div><div>删除</div>
+					<p>这个老师太棒了！</p>
+				</li>
+			</ul>
+			<div class="listBtn">
+				<div>共有<span>40</span>条记录</div>
+				<div class="pageNumber">
+					<div>&lt;</div>
+					<div class="pageNumber_active">1</div>
+					<div>2</div>
+					<div>3</div>
+					<div>&gt;</div>
+				</div>
+			</div>
+		</div>
+		<!--更新网站样式-->
+		<div class="content_display" id="websiteStyle">
+			<div class="pageBackground">
+				<div class="titleStyle">设置页头背景图<span>（温馨提示：上传的背景图要求宽度100%，高度200px。）</span></div>
+				<div class="uploadPic">请上传图片</div>
+				<div class="uploadBtn">
+					<div class="btn">上传图片</div>
+					<div class="btn">确定上传</div>
+				</div>
+			</div>
+			<div  class="picCarousel">
+				<div class="titleStyle">设置图片轮播<span>（请选择轮播图片及地址）</span></div>
+				<div class="picAddress"><div>图片地址：</div><div>链接地址：</div></div>
+				<ul>
+					<li><input type="text"><div></div><input type="text"></li>
+					<li><input type="text"><div></div><input type="text"></li>
+					<li><input type="text"><div></div><input type="text"></li>
+				</ul>
+				<div class="uploadBtn">
+					<div class="btn">保存</div>
+					<div class="btn">取消</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

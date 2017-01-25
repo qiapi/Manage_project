@@ -1,0 +1,58 @@
+.pageBackground {
+	border-bottom: 1px solid #bdbdbd;
+	margin-bottom: 30px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+}
+.uploadPic {
+	width: 400px;
+	height: 200px;
+	border: 1px solid #bdbdbd;
+	margin: 20px auto;
+	text-align: center;
+	line-height: 200px;
+	border-radius: 3px;
+	background-color: #eeeeee;
+	color: #9e9e9e;
+}
+.uploadBtn {
+	text-align: center;
+}
+.uploadBtn div {
+	display: inline-block;
+}
+.picCarousel {
+	border-bottom: 1px solid #bdbdbd;
+	padding-bottom: 20px;
+	padding-left: 20px;
+}
+.picAddress {
+	margin-top: 10px;
+}
+.picAddress div {
+	display: inline-block;
+	font-family: 微软雅黑;
+	font-size: 18px;
+	width: 300px;
+}
+.picCarousel ul li input {
+	width: 250px;
+	height: 25px;
+	border: 1px solid #bdbdbd;
+	border-radius: 3px;
+	margin-top: 10px;
+	position: relative;
+	top: -20px;
+	padding: 2px 6px 2px 6px;
+}
+.picCarousel ul li div {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	margin: 11px;
+	background: url(../image/Add_Image.png);
+	background-size: cover;
+}
+.picCarousel ul li div:hover {
+	cursor: pointer;
+}
